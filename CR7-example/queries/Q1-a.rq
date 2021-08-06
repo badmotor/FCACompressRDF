@@ -1,0 +1,7 @@
+#Q1-a: In 'KG-2013' what team did CR7 play for?
+
+SELECT * 
+WHERE{
+  ?s ?p ?o . 
+  FILTER(CONTAINS(str(?p), "08"))
+}
