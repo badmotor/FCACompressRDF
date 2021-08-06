@@ -1,4 +1,4 @@
-#Q1-b: What "occupations" did CR7 have in 'KG-2013'?
+#Q3-a: What triple with subject "CR7" and predicate "ex:speaks" was added between the two consecutive versions 'KG-2002' and 'KG-2008'?
 
 SELECT * 
 WHERE{
