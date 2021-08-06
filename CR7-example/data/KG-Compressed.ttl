@@ -1,7 +1,8 @@
-ex:CR7 ex:name?v=02-20 "Cristiano Ronaldo" .
-ex:CR7 ex:born?v=02-20 ex:Madeira .
-ex:CR7 ex:occupation?v=02-20#08,20#13 "Football_Player#Entrepreneur#Model" .
-ex:CR7 ex:playsFor?v=02#08#13#20 ex:Sporting_CP#ex:Man_United#ex:Real_Madrid#ex:Juve .
-ex:CR7 ex:speaks?v=02-20#08-20#13-20 "Portuguese#English#Spanish" .
-ex:CR7 ex:fatherOf?v=13-20 ex:Cristiano_Jr .
+@prefix ex: <http://example.org/>.
 
+ex:CR7 <http://example.org/name?v=02-20> "Cristiano Ronaldo" .
+ex:CR7 <http://example.org/born?v=02-20> ex:Madeira .
+ex:CR7 <http://example.org/occupation?v=02-20#08,20#13> "Football_Player#Entrepreneur#Model" .
+ex:CR7 <http://example.org/playsFor?v=02#08#13#20> <http://example.org/Sporting_CP#ex:Man_United#ex:Real_Madrid#ex:Juve> .
+ex:CR7 <http://example.org/speaks?v=02-20#08-20#13-20> "Portuguese#English#Spanish" .
+ex:CR7 <http://example.org/fatherOf?v=13-20> ex:Cristiano_Jr .
