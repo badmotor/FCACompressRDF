@@ -1,4 +1,4 @@
-#Q1-b: What "occupations" did CR7 have in 'KG-2013'?
+#Q2-b: In which KG versions did CR7 have the "occupation" of 'Entrepreneur'?
 
 SELECT * 
 WHERE{
