@@ -1,4 +1,4 @@
-#Q1-b: What "occupations" did CR7 have in 'KG-2013'?
+#Q4-a: What changed between the non-consecutive versions 'KG-2002' and '2020'?
 
 SELECT * 
 WHERE{
