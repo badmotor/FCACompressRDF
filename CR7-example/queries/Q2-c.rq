@@ -1,4 +1,4 @@
-#Q1-b: What "occupations" did CR7 have in 'KG-2013'?
+#Q2-c: Which predicates connect CR7 to "ex:Madeira" and in which versions?
 
 SELECT * 
 WHERE{
