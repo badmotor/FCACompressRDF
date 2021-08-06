@@ -1,4 +1,4 @@
-#Q1-b: What "occupations" did CR7 have in 'KG-2013'?
+#Q6-a: What are all the statements about CR7 valid in version `KG-2008'?
 
 SELECT * 
 WHERE{
