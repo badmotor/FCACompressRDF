@@ -3,5 +3,5 @@
 SELECT * 
 WHERE{
   ?s ?p ?o . 
-  FILTER(CONTAINS(str(?p), "08"))
+  FILTER regex(str(?p), "[?&]v=([^&]*)08.*$").
 }
