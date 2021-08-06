@@ -1,4 +1,4 @@
-#Q1-b: What "occupations" did CR7 have in 'KG-2013'?
+#Q2-a: In which KG version did CR7 play for 'ex:Juve'?
 
 SELECT * 
 WHERE{
