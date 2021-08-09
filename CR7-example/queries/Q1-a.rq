@@ -1,7 +1,21 @@
 #Q1-a: In 'KG-2013' what team did CR7 play for?
 
-SELECT * 
+PREFIX ex: <http://example.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?o
 WHERE{
-  ?s ?p ?o . 
-  FILTER(CONTAINS(str(?p), "08"))
+  	?s ?p ?o .
+    FILTER (CONTAINS(str(?p),"playsFor?")).
+    {
+    	?s ?p ?o.
+  		FILTER regex(str(?p), "[?&]v=([^&]*)13.*$").
+  	}UNION{
+    	?s ?p ?o . 
+  		BIND (REPLACE(str(?p), "(..)*-.*", "$1") AS ?strFrom).
+  		BIND (REPLACE(str(?p), ".*-(..).*", "$1") AS ?strTo).
+  		FILTER (xsd:int(?strFrom) < 13).
+    	FILTER (xsd:int(?strTo) > 13).
+  	}
 }
+
