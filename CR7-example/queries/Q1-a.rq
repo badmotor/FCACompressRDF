@@ -3,8 +3,10 @@
 PREFIX ex: <http://example.org/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT ?o
+SELECT DISTINCT ?objString
 WHERE{
+  
+  	BIND (ex:CR7 as ?s). 
   	?s ?p ?o .
     FILTER (CONTAINS(str(?p),"playsFor?")).
     {
@@ -17,5 +19,11 @@ WHERE{
   		FILTER (xsd:int(?strFrom) < 13).
     	FILTER (xsd:int(?strTo) > 13).
   	}
+  	
+  	BIND( (STRAFTER(str(?p), "v=")) AS ?versionsString ).
+  	BIND( xsd:int((strlen(STRBEFORE(str(?versionsString), "#13"))+1)/3) AS ?positionVer ).
+  	BIND (concat("(.*#){" , str(?positionVer) , "}(.+#){1}") AS ?pattern).
+  	BIND (STRBEFORE((replace(str(?o), ?pattern, "$2")), "#") AS ?objString).
 }
+
 
